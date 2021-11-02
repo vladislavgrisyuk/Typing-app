@@ -1,0 +1,26 @@
+<%- include('./main/header.ejs')  %>
+
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      New article
+    </div>
+    <div class="card-body">
+      <form method="post">
+        <div class="form-floating pb-3">
+          <textarea name="title" required class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 50px"></textarea>
+          <label for="floatingTextarea2">Header</label>
+        </div>
+        <div class="form-floating pb-3">
+          <textarea name="content" required class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+          <label for="floatingTextarea2">Content</label>
+        </div>
+        <div class="flex flex-right">
+          <div><input type="submit" value="Publish" class="btn btn-primary"></div>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>
+<%- include('./main/footer.ejs')  %>
