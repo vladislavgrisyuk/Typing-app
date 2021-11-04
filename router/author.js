@@ -1,9 +1,9 @@
-const app = require('express');
-const author = app.Router();
-const authorController = require('../controllers/author-controller');
+const app = require('express')
+const author = app.Router()
+const authorController = require('../controllers/authorController')
 
-author.get('/', authorController.author_all);
-author.get('/create', authorController.author_create);
-author.get('/:id', authorController.author_profile);
-author.post('/create', authorController.author_create_post);
-module.exports = author;
+author.get('/', authorController.getAll)
+author.get('/create', authorController.getCreatePage)
+author.get('/:id', authorController.getProfile)
+author.post('/create', authorController.postCreate)
+module.exports = author

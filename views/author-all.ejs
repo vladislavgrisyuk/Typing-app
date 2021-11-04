@@ -1,18 +1,18 @@
-<%- include('./main/header.ejs')  %>
-<div class="container">
+<%- include('./main/header.ejs') %>
+<div class="container-fluid">
   <% data.forEach(el => { el.content = el.content.replace(/ /g, '␣') %>
   <!-- <a href="author/create">Create</a> -->
-  <div class="card mb-3">
+  <div class="card mb-3" style="color: white">
     <h5 class="card-header">Article</h5>
     <div class="card-body">
-      <h5 class="card-title"><%= el.title %> </h5>
+      <h5 class="card-title"><%= el.title %></h5>
       <p class="card-text">
-        <% for( let i = 0; i < el.content.length; i++ ){%><% if (el.content[i] == '␣')
-        {%><span style="padding: 2px 0; white-space: nowrap;"><%=el.content[i]%></span><wbr><%} else{%><span style="padding: 2px 0; white-space: nowrap;"><%=el.content[i]%></span><%}%><%}%>
+        <% for( let i = 0; i < el.content.length; i++ ){%><% if (el.content[i] == '␣') {%><span style="padding: 2px 0; white-space: nowrap"><%=el.content[i]%></span><wbr /><%} else{%><span style="padding: 2px 0; white-space: nowrap"
+          ><%=el.content[i]%></span
+        ><%}%><%}%>
       </p>
       <a href=" #" class="btn btn-primary">View article</a>
-      <a href="#" style="float: right;" class="btn btn-success">Like 👍</a>
-
+      <a href="#" style="float: right" class="btn btn-success">Like 👍</a>
     </div>
     <div class="card-footer flex">
       <small class="text-muted">Posted at: <%= new Date(el.createdAt).toISOString() %> </small>
@@ -25,19 +25,18 @@
   let spans = a.querySelectorAll('span')
   spans[0].classList.toggle('main')
   console.log(spans)
-  let counter = 0;
-  let errors = 0;
+  let counter = 0
+  let errors = 0
 
-  var myTimer = window.setInterval(func, 400);
+  var myTimer = window.setInterval(func, 400)
 
   document.addEventListener('keydown', (e, o) => {
-
     if (e.key == spans[counter].innerText.toLowerCase() || (e.key == ' ' && spans[counter].innerText.toLowerCase() == '␣')) {
       {
         spans[counter].classList.remove('main')
         spans[++counter].classList.toggle('main')
-        window.clearInterval(myTimer);
-        myTimer = window.setInterval(func, 400);
+        window.clearInterval(myTimer)
+        myTimer = window.setInterval(func, 400)
       }
     } else {
       // spans[counter].classList.add('error')
@@ -48,10 +47,9 @@
   function func() {
     spans[counter].classList.toggle('main')
     console.log(spans[counter].innerText.charCodeAt(0))
-
   }
 
   console.log(a)
 </script>
 
-<%- include('./main/footer.ejs')  %>
+<%- include('./main/footer.ejs') %>

@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const user = require('../models/user')
 const jwt = require('jsonwebtoken')
-const registerController = require('../controllers/register-controller')
+const registerController = require('../controllers/registerController')
 
 router.get('/', (req, res) => {
   console.log('req.user: ' + req?.user)
