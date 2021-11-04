@@ -1,24 +1,27 @@
 <%- include('./main/header.ejs') %>
 <div class="container-fluid">
-  <% if (locals.data) { %> <% data.forEach(el => { el.content = el.content.replace(/ /g, '␣') %>
-  <!-- <a href="author/create">Create</a> -->
-  <div class="card mb-3" style="color: white">
-    <h5 class="card-header">Article</h5>
-    <div class="card-body">
-      <h5 class="card-title"><%= el.title %></h5>
-      <p class="card-text">
-        <% for( let i = 0; i < el.content.length; i++ ){%><% if (el.content[i] == '␣') {%><span style="padding: 2px 0; white-space: nowrap"><%=el.content[i]%></span><wbr /><%} else{%><span style="padding: 2px 0; white-space: nowrap"
-          ><%=el.content[i]%></span
-        ><%}%><%}%>
-      </p>
-      <a href=" #" class="btn btn-primary">View article</a>
-      <a href="#" style="float: right" class="btn btn-success">Like 👍</a>
+    <% if (locals.data) { %>
+    <% data.forEach(el => { el.content = el.content.replace(/ /g, '␣') %>
+    <!-- <a href="author/create">Create</a> -->
+    <div class="card mb-3">
+        <h5 class="card-header">Article</h5>
+        <div class="card-body">
+            <h5 class="card-title">
+                <%= el.title %>
+            </h5>
+            <p class="card-text">
+                <% for( let i = 0; i < el.content.length; i++ ){%>
+                <% if (el.content[i] == '␣') {%><span style="padding: 2px 0; white-space: nowrap"><%=el.content[i]%></span><wbr />
+                <%} else{%><span style="padding: 2px 0; white-space: nowrap"><%=el.content[i]%></span><%}%><%}%>
+            </p>
+            <a href=" #" class="btn btn-primary">View article</a>
+            <a href="#" style="float: right" class="btn btn-success">Like 👍</a>
+        </div>
+        <div class="card-footer flex">
+            <small class="text-muted">Posted at: <%= new Date(el.createdAt).toISOString() %> </small>
+        </div>
     </div>
-    <div class="card-footer flex">
-      <small class="text-muted">Posted at: <%= new Date(el.createdAt).toISOString() %> </small>
-    </div>
-  </div>
-  <% }) %> <% } %>
+    <% }) %> <% } %>
 </div>
 <!-- <script>
   let a = document.querySelectorAll('.card-text')[3]

@@ -9,14 +9,14 @@ const app = express()
 const cfg = require('./config')
 
 mongoose
-  .connect(cfg.DB_URL, { useNewUrlParser: true })
-  .then((db) => {
-    console.log('Connected to ' + db.connections[0].name)
-    app.listen(3000, () => {
-      console.log('Server is listening on port 3000!')
+    .connect(cfg.DB_URL, { useNewUrlParser: true })
+    .then((db) => {
+        console.log('Connected to ' + db.connections[0].name)
+        app.listen(3000, () => {
+            console.log('Server is listening!')
+        })
     })
-  })
-  .catch((err) => console.log(err))
+    .catch((err) => console.log(err))
 
 app.set('view engine', 'ejs')
 app.use(cookie_parser())
@@ -28,6 +28,6 @@ app.use('/typing', typingRouter)
 app.use(express.static('public'))
 
 app.get('/', (req, res) => {
-  //res.cookie('token', undefined);
-  res.redirect('/author')
+    //res.cookie('token', undefined);
+    res.redirect('/author')
 })

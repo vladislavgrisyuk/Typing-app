@@ -1,35 +1,35 @@
 * {
-  font-family: 'Ubuntu Mono', monospace !important;
-  font-weight: lighter;
-  text-decoration: none !important;
+    font-family: 'Ubuntu Mono', monospace !important;
+    font-weight: lighter;
+    text-decoration: none !important;
 }
 
 ul {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
-.card {
+/* .card {
   background-color: #1f2128;
-}
+} */
 
 body {
-  background-color: #292833;
+    /* background: var(--bs-blue); */
 }
 
 .top-menu {
-  height: 50px;
-  background: white;
-  width: 100%;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  margin-bottom: 38px;
+    height: 50px;
+    /* background: white; */
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 38px;
 }
 
 .profile-header {
-  display: flex;
+    display: flex;
 }
 
-.profile-header > div {
+/* .profile-header > div {
   margin: 0 5px;
 }
 
@@ -39,79 +39,58 @@ body {
 
 .card-body {
   background: #23242d;
-}
+} */
 
 .card-body > span {
-  font-size: 20px;
-  padding: 3px 0.5px;
-  color: white;
-  /* background: rgba(0, 0, 0, 0.863); */
+    font-size: 20px;
+    /* padding: 3px 0.5px; */
+    color: white;
+    /* background: rgba(0, 0, 0, 0.863); */
 }
 
 .gray {
-  /* background: black; */
-  color: gray;
+    /* background: black; */
+    color: gray;
 }
 
 .main {
-  background: white !important;
-  color: black !important;
-  text-decoration: underline overline;
+    background: white !important;
+    color: black !important;
+    text-decoration: underline overline;
 }
 
 .error {
-  /* background: black !important; */
-  color: red !important;
+    /* background: black !important; */
+    color: red !important;
 }
 
 .profile-greet {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .register-block {
-  display: flex;
+    display: flex;
 }
 
 .register-block > div {
-  margin: 0 5px;
+    margin: 0 5px;
 }
 
 .line {
-  background-color: white;
-  width: 100%;
-  height: 10px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  position: relative;
-}
-
-.nav {
-  display: flex;
-  align-items: stretch;
-  justify-content: space-between;
-  height: 50px;
-}
-
-.nav > ul {
-  display: flex;
-}
-
-.nav ul li {
-  display: flex;
-}
-
-.nav ul li a {
-  display: flex;
-  align-items: center;
-  padding: 5px 10px;
+    background-color: white;
+    width: 100%;
+    height: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    position: relative;
 }
 
 .login {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .nav ul li a:hover {
-  transition: 0.3s all;
-  background: rgba(0, 0, 0, 0.05);
+    transition: 0.3s all;
+    background: rgba(0, 0, 0, 0.05);
 }

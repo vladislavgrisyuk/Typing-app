@@ -1,27 +1,31 @@
 <%- include('../main/header.ejs') %>
-<div class="card container">
-  <h5 class="card-header">Featured</h5>
-  <div class="card-body mb-3">
-    <form action="" method="POST" style="color: white">
-      <% if (typeof(errors) != "undefined") { %> <% errors.forEach(el => { %>
-      <div class="alert alert-danger" role="alert"><%= el.msg %></div>
-      <% }) %> <% } %>
-      <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Username</label>
-        <input type="username" class="form-control" name="username" id="exampleFormControlInput1" placeholder="username123" />
-      </div>
-      <div class="mb-3">
-        <label for="password" class="form-label">Password</label>
+    <div class="card container">
+        <h5 class="card-header">Featured</h5>
+        <div class="card-body mb-3">
+            <form action="" method="POST" style="color: white">
+                <% if (typeof(errors) != "undefined") { %>
+                    <% errors.forEach(el => { %>
+                        <div class="alert alert-danger" role="alert">
+                            <%= el.msg %>
+                        </div>
+                        <% }) %>
+                            <% } %>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Username</label>
+                                    <input type="username" class="form-control" name="username" id="exampleFormControlInput1" placeholder="username123" />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">Password</label>
 
-        <input type="password" name="password" class="form-control" id="password" placeholder="********" />
-      </div>
-      <div class="mb-3">
-        <label for="password" class="form-label">Repeat password</label>
+                                    <input type="password" name="password" class="form-control" id="password" placeholder="********" />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">Repeat password</label>
 
-        <input type="password" name="repeat-password" class="form-control" id="repeat-password" placeholder="********" />
-      </div>
-      <input type="submit" value="Sign up" class="btn btn-primary" />
-    </form>
-  </div>
-</div>
-<%- include('../main/footer.ejs') %>
+                                    <input type="password" name="repeat-password" class="form-control" id="repeat-password" placeholder="********" />
+                                </div>
+                                <input type="submit" value="Sign up" class="btn btn-primary" />
+            </form>
+        </div>
+    </div>
+    <%- include('../main/footer.ejs') %>
