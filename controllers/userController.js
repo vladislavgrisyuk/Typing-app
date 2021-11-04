@@ -8,8 +8,12 @@ const userController = {
       return false
     }
   },
-  getUser: async (username) => {
-    return await user.find({ username })
+  getUser: async (obj) => {
+    return await user.find(obj)
+  },
+
+  getUserById: async (id) => {
+    return await user.findById(id)
   },
 }
 

@@ -1,6 +1,6 @@
 <%- include('../main/header.ejs')  %>
 
-<% if (Object.keys(user).length !== 0) { %>
+<% if (locals.user) { %>
 <h1>Hello, <%= user.username %> </h1>
 <% } else { %>
 <div class="container border p-4 pt-2">

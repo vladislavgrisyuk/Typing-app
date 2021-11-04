@@ -1,6 +1,6 @@
 <%- include('./main/header.ejs') %>
 <div class="container-fluid">
-  <% data.forEach(el => { el.content = el.content.replace(/ /g, '␣') %>
+  <% if (locals.data) { %> <% data.forEach(el => { el.content = el.content.replace(/ /g, '␣') %>
   <!-- <a href="author/create">Create</a> -->
   <div class="card mb-3" style="color: white">
     <h5 class="card-header">Article</h5>
@@ -18,9 +18,9 @@
       <small class="text-muted">Posted at: <%= new Date(el.createdAt).toISOString() %> </small>
     </div>
   </div>
-  <% }) %>
+  <% }) %> <% } %>
 </div>
-<script>
+<!-- <script>
   let a = document.querySelectorAll('.card-text')[3]
   let spans = a.querySelectorAll('span')
   spans[0].classList.toggle('main')
@@ -50,6 +50,6 @@
   }
 
   console.log(a)
-</script>
+</script> -->
 
 <%- include('./main/footer.ejs') %>

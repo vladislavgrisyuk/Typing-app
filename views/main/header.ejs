@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="/style.css">
   <!-- <link rel="stylesheet" href="/reset.css"> -->
 </head>
-
+ 
 <body>
   <div class="line"></div>
   <div class="top-menu">
@@ -25,10 +25,10 @@
           <li><a href="/">Profile</a></li>
           <li><a href="/typing">Typing</a></li>
         </ul>
-        <% if (Object.keys(user).length !== 0) { %>
+        <% if (locals.user) { %>
         <div class="profile-header">
           <div class="profile-greet">
-            <span>Hello, <a href="#"><%= user.username %> </a></span>
+            <sparsn>Hello, <a href="#"><%= user.username %> </a></span>
           </div>
           <div class="login"><a href="/register/logout" class="btn btn-primary">Log out</a></div>
         </div>

@@ -1,9 +1,9 @@
-const comment = require('../models/comment')
+const comment = require('../models/article')
 const _ = require('lodash')
 
 const getAll = (req, res) => {
   comment.find({ authorId: req?.user?._id }).then((data) => {
-    res.render('author-all', data)
+    res.render('author-all', { data })
   })
 }
 
@@ -11,7 +11,7 @@ const getProfile = (req, res) => {
   if (_.isEmpty(req?.user)) res.redirect('/register')
   else
     comment.findById(req.params.id).then((data) => {
-      res.render('author-profile', data)
+      res.render('author-profile', { data })
     })
 }
 
